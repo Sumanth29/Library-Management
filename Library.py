@@ -5,7 +5,7 @@
 # add book
 # return book
 
-# HarryLibrary = Library(listofbooks, library_name)
+# MiniLibrary = Library(listofbooks, library_name)
 
 
 #dictionary (books-nameofperson)
@@ -40,10 +40,10 @@ class Library:
         self.lendDict.pop(book)
 
 if __name__ == '__main__':
-    harry = Library(['Python', 'Rich Daddy Poor Daddy', 'Harry Potter', 'C++ Basics', 'Algorithms by CLRS'], "CodeWithHarry")
+    Mini = Library(['Python', 'Rich Daddy Poor Daddy', 'Harry Potter', 'C++ Basics', 'Algorithms by CLRS'], "CodeWithHarry")
 
     while(True):
-        print(f"Welcome to the {harry.name} library. Enter your choice to continue")
+        print(f"Welcome to the {Mini.name} library. Enter your choice to continue")
         print("1. Display Books")
         print("2. Lend a Book")
         print("3. Add a Book")
@@ -58,20 +58,20 @@ if __name__ == '__main__':
 
 
         if user_choice == 1:
-            harry.displayBooks()
+            Mini.displayBooks()
 
         elif user_choice == 2:
             book = input("Enter the name of the book you want to lend:")
             user = input("Enter your name")
-            harry.lendBook(user, book)
+            Mini.lendBook(user, book)
 
         elif user_choice == 3:
             book = input("Enter the name of the book you want to add:")
-            harry.addBook(book)
+            Mini.addBook(book)
 
         elif user_choice == 4:
             book = input("Enter the name of the book you want to return:")
-            harry.returnBook(book)
+            Mini.returnBook(book)
 
         else:
             print("Not a valid option")
